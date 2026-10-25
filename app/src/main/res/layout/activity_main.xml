@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age Analyzer"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/select_birthday"
+            app:cornerRadius="12dp"
+            android:backgroundTint="@color/purple_500"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/resultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:visibility="gone"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvYears"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 @string/years"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvMonths"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 @string/months" 
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginVertical="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 Days | 0 Hours | 0 Mins"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/text_grey"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
